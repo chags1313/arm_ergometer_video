@@ -15,13 +15,9 @@
 
     #video-container {
       width: 640px; /* Adjust this value to your desired width */
-      position: relative;
     }
 
-    #video {
-      position: absolute;
-      top: 0;
-      left: 0;
+    iframe {
       width: 100%;
       height: 100%;
     }
@@ -29,45 +25,7 @@
 </head>
 <body>
   <div id="video-container">
-    <div id="video"></div>
+    <iframe width="696" height="391" src="https://www.youtube.com/embed/0eONwwRUIJc" title="7 Minute Excy Arm Candy: Upper Body Workout Arm Cycle (Similar to an Upper Body Ergometer)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
-
-  <script>
-    // Load YouTube API
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    // Create YouTube player
-    var player;
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('video', {
-        videoId: '0eONwwRUIJc', // Replace with your video ID
-        playerVars: {
-          controls: 0, // Hide video controls
-          fs: 0, // Disable fullscreen
-        },
-        events: {
-          onReady: onPlayerReady
-        }
-      });
-    }
-
-    // Center the video after it's loaded
-    function onPlayerReady(event) {
-      var playerElement = event.target.getIframe();
-      var containerElement = document.getElementById('video-container');
-      var containerWidth = containerElement.offsetWidth;
-      var containerHeight = containerElement.offsetHeight;
-      var playerWidth = playerElement.offsetWidth;
-      var playerHeight = playerElement.offsetHeight;
-      var leftOffset = (containerWidth - playerWidth) / 2;
-      var topOffset = (containerHeight - playerHeight) / 2;
-
-      playerElement.style.left = leftOffset + 'px';
-      playerElement.style.top = topOffset + 'px';
-    }
-  </script>
 </body>
 </html>
