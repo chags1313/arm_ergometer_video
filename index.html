@@ -13,7 +13,17 @@
       padding: 0;
     }
 
+    #video-container {
+      width: 100%; /* Adjust this value to your desired width */
+      height: 0;
+      padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio (height/width) */
+      position: relative;
+    }
+
     iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
     }
@@ -21,7 +31,7 @@
 </head>
 <body>
   <div id="video-container">
-    <iframe width="696" height="391" src="https://www.youtube.com/embed/0eONwwRUIJc" title="7 Minute Excy Arm Candy: Upper Body Workout Arm Cycle (Similar to an Upper Body Ergometer)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/0eONwwRUIJc?autoplay=1" title="7 Minute Excy Arm Candy: Upper Body Workout Arm Cycle (Similar to an Upper Body Ergometer)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
 </body>
 </html>
